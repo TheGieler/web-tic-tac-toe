@@ -18,5 +18,6 @@ const main = async () => {
     player: "Player",
   });
   const playerId = docRef.id;
+  document.getElementById("playerId").innerText = playerId;
 };
 main();
