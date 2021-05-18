@@ -18,10 +18,10 @@ const main = async () => {
 
   const playerCount = querySnapshot.size + 1;
   if (playerCount < 3) {
-  const docRef = await db.collection("players").add({
-    player: "Player",
-  });
-  const playerId = docRef.id;
+    const docRef = await db.collection("players").add({
+      player: `Player ${playerCount}`,
+    });
+    const playerId = docRef.id;
     console.log(playerId);
     console.log(docRef);
     // document.getElementById("playerName").innerText = docRef.player;
