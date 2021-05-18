@@ -14,5 +14,8 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 const main = async () => {
+  const docRef = await db.collection("players").add({
+    player: "Player",
+  });
 };
 main();
