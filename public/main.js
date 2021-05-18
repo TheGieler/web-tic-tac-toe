@@ -17,11 +17,13 @@ const main = async () => {
   const querySnapshot = await db.collection("players").get();
 
   const playerCount = querySnapshot.size + 1;
+  if (playerCount < 3) {
   const docRef = await db.collection("players").add({
     player: "Player",
   });
   const playerId = docRef.id;
     // document.getElementById("playerName").innerText = docRef.player;
+  }
   // db.collection("players")
   //   .doc("dGr7mwqccimNwnZOWrVx")
   //   .onSnapshot((collectionSnapshot) => {
