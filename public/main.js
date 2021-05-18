@@ -12,3 +12,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
+
+const main = async () => {
+};
+main();
