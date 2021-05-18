@@ -18,12 +18,11 @@ const main = async () => {
     player: "Player",
   });
   const playerId = docRef.id;
-  document.getElementById("playerId").innerText = playerId;
-  const querySnapshot = await db.collection("players").get();
-  db.collection("players")
-    .doc("dGr7mwqccimNwnZOWrVx")
-    .onSnapshot((collectionSnapshot) => {
-      console.log(collectionSnapshot.data());
-    });
+    // document.getElementById("playerName").innerText = docRef.player;
+  // db.collection("players")
+  //   .doc("dGr7mwqccimNwnZOWrVx")
+  //   .onSnapshot((collectionSnapshot) => {
+  //     console.log(collectionSnapshot.data());
+  //   });
 };
 main();
