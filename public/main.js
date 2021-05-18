@@ -22,6 +22,8 @@ const main = async () => {
     player: "Player",
   });
   const playerId = docRef.id;
+    console.log(playerId);
+    console.log(docRef);
     // document.getElementById("playerName").innerText = docRef.player;
   }
   // db.collection("players")
