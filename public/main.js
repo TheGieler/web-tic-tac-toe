@@ -14,6 +14,7 @@ firebase.initializeApp(firebaseConfig);
 let db = firebase.firestore();
 
 const main = async () => {
+  const playerCount = querySnapshot.size + 1;
   const docRef = await db.collection("players").add({
     player: "Player",
   });
