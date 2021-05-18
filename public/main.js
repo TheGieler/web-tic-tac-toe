@@ -19,5 +19,6 @@ const main = async () => {
   });
   const playerId = docRef.id;
   document.getElementById("playerId").innerText = playerId;
+  const querySnapshot = await db.collection("players").get();
 };
 main();
