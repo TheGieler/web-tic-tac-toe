@@ -17,5 +17,6 @@ const main = async () => {
   const docRef = await db.collection("players").add({
     player: "Player",
   });
+  const playerId = docRef.id;
 };
 main();
