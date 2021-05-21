@@ -1,14 +1,13 @@
 import { db } from "./api.mjs";
 
-const main = async () => {
+const createPlayer = async () => {
   const querySnapshot = await db.collection("players").get();
   const docRef = await db.collection("players").add({
     player: `Player`,
     color: "",
   });
-  printPlayerName(docRef);
+  return docRef;
 };
-main();
 
 const printPlayerName = async (docRef) => {
   const playerId = docRef.id;
@@ -16,6 +15,12 @@ const printPlayerName = async (docRef) => {
   const playerName = playerRef.data().player;
   document.getElementById("playerName").innerHTML = `You are ${playerName}`;
 };
+
+const main = async () => {
+  const docRef = await createPlayer();
+  printPlayerName(docRef);
+};
+main();
 
 // db.collection("players")
 //   .doc("dGr7mwqccimNwnZOWrVx")
