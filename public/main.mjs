@@ -1,9 +1,10 @@
 import { db } from "./api.mjs";
 
-const createPlayer = async () => {
+const createPlayer = async (num) => {
   const docRef = await db.collection("players").add({
-    player: `Player`,
+    player: `Player ${num}`,
   });
+  console.log(`Player ${num} created`);
   return docRef;
 };
 
