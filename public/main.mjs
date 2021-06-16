@@ -24,8 +24,3 @@ db.collection("players").onSnapshot((a) => {
     createPlayer(playerNumber);
   }
 });
-
-const main = async () => {
-  const docRef = await createPlayer();
-};
-main();
